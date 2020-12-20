@@ -73,6 +73,8 @@ body {
     line-height: 1.6;
 }
 
+.darkmode--activated body {}
+
 h1,
 h2,
 h3,
@@ -232,20 +234,19 @@ img {
 .scroll-header {
     background-color: var(--first-color-lighten);
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    transition: all .6s ease-in-out;
 }
 
 .scroll-header .nav__logo,
 .scroll-header .home__social-icon,
 .scroll-header .nav__toggle,
-.scroll-header .nav__link {
+.scroll-header .nav__link,
+.scroll-header .text__cv {
     color: var(--first-color-dark);
+    transition: all .6s ease-out;
 }
 
-.scroll-header .nav__menu {
-    background-color: var(--first-color-lighten);
-}
-
-
+*
 /*===== SCROLL TOP =====*/
 
 .scrolltop {
@@ -349,11 +350,11 @@ h1 {
     width: max-content;
     font-size: 1.3rem;
     margin-bottom: var(--mb-2);
-    color: var(--first-color-lighten)
+    color: var(--first-color-lighten);
 }
 
 .home__social-icon:hover {
-    color: var(--first-color-light)
+    color: var(--first-color-light);
 }
 
 
@@ -387,6 +388,10 @@ h1 {
 
 
 /*===== ABOUT =====*/
+
+section#about {
+    padding-top: 3rem;
+}
 
 .about__data {
     grid-template-columns: (2, 1fr);
@@ -463,6 +468,10 @@ h1 {
 
 
 /*===== EDUCATION =====*/
+
+.education.section {
+    padding: 0 0 4rem 0;
+}
 
 .education__container {
     row-gap: 2rem;
@@ -572,6 +581,7 @@ h1 {
     color: var(--first-color-lighten);
     border-radius: .5rem;
     text-align: center;
+    isolation: isolate;
 }
 
 .project__icon,
@@ -755,9 +765,6 @@ h1 {
     .contact__form {
         width: 450px;
         justify-self: center;
-    }
-    .home__container {
-        row-gap: 12.5rem;
     }
     .about__data.bd-grid {
         text-align: center;

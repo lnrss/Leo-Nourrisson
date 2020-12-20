@@ -18,6 +18,9 @@
 
     <!-- ===== CSS ===== -->
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!--===== AOS =====-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 </head>
 
 <body>
@@ -51,6 +54,7 @@
             <div class="home__social" id="social">
                 <a href="https://www.linkedin.com/in/l%C3%A9o-nourrisson-96a626200/" target="_blank" class="home__social-icon"><i class='bx bxl-linkedin' id="linkedin-top"></i></a>
                 <a href="https://github.com/lnrss" target="_blank" class="home__social-icon"><i class='bx bxl-github' id="github-top"></i></a>
+                <a class="text__cv">Mon&nbspCV</a>
                 <a href="assets/pdf/Cv - Léo Nourrisson.pdf" target="_blank" download="CV - Léo Nourrisson" class="home__social-icon"><i class='bx bx-file-blank' id="file"></i></a>
             </div>
             <div class="nav__toggle" id="nav-toggle">
@@ -89,7 +93,8 @@
 
             <div class="bd-grid">
                 <div class="about__data bd-grid">
-                    <p class="about__description"><span>Hey, <br></span id="description">Fort d’une adaptabilité, d’une motivation et d’une curiosité certaine, je suis<br>actuellement à la recherche d’un emploi en alternance dans le développement web.</p>
+                    <p class="about__description"><span>Hey, <br></span id="description">Je suis passionné par le web et les nouvelles technologies, j’ai eu l’occasion de parfaire mes compétences grâce à l’alternance<br>que m’a offert mon Bac mais aussi grâce à des projets qui m’ont permis de les mettre en pratique.
+                    </p>
                 </div>
                 <div class="informations"><div class="about__information">
                     <h3 class="about__information-title">Informations</h3>
@@ -110,9 +115,10 @@
                         <span>Sport, Musique, Cinéma</span>
                     </div>
                 </div>
+
             </div>
             <div class="about__information">
-                <h3 class="about__information-title">Expérience et Diplôme</h3>
+                <h3 class="about__information-title">Expériences & Diplômes</h3>
 
 
                 <div class="about__information-data">
@@ -138,14 +144,14 @@
 
         <!--===== EDUCATION =====-->
         <section class="education section">
-            <span class="section-subtitle">Scolaire & Professionnel</span>
+            <span class="section-subtitle">Scolaire & Pro</span>
             <h2 class="section-title">Parcours</h2>
 
             <div class="education__container bd-grid">
                 <div class="education__content">
                     <div>
                         <h3 class="education__year">2017 - 2019</h3>
-                        <span class="education__university">Lycée de l'Hyrôme</span>
+                        <span class="education__university">Bac Pro SN - Lycée de l'Hyrôme</span>
                     </div>
 
                     <div class="education__time">
@@ -180,18 +186,33 @@
                         </div>
 
                     </div>
+
                 </div>
+                <div class="education__content">
+                    <div>
+                        <h3 class="education__year">2020 - 2022</h3>
+                        <span class="education__university">BTS SIO - Lycée Fenelon</span>
+                    </div>
 
+                    <div class="education__time">
+                        <span class="education__rounder"></span>
+                        <span class="education__line"></span>
+                    </div>
 
+                    <div class="education__content">
+                        <div>
+                            <h3 class="education__race">Ici Carte Grise</h3>
+                            <span class="education__specialty">Développement Web Full Stack</span>
+                        </div>
 
-
-            </div>
+                    </div>
+                </div>
         </section>
 
 
 
         <!--===== CV =====-->
-        <section class="project section bd-container">
+        <section class="project section bd-container" data-aos="fade-top" data-aos-duration="800">
             <div class="project__container bd-grid">
                 <div class="project__data">
                     <i class='bx bx-id-card project__icon'></i>
@@ -238,20 +259,19 @@
                     </div>
                 </div>
 
-                <form action="" class="contact__form">
+                <form method="POST" action="" class="contact__form">
                     <div class="contact__inputs">
-                        <input type="text" placeholder="Nom" class="contact__input">
-                        <input type="email" placeholder="Email" class="contact__input">
+                        <input type="text" name="nom" placeholder="Nom" class="contact__input">
+                        <input type="email" name="mail" placeholder="Email" class="contact__input">
                     </div>
 
                     <div class="contact__inputs">
-
-                        <input type="number" placeholder="Numéro" class="contact__input">
+                        <input type="number" name="number" placeholder="Numéro" class="contact__input">
                     </div>
 
-                    <textarea name="" id="" cols="0" rows="7" placeholder="Message" class="contact__input"></textarea>
+                    <textarea name="message" cols="0" rows="7" placeholder="Message" class="contact__input"></textarea>
 
-                    <input type="submit" value="Envoyer" class="button contact__button">
+                    <input type="submit" value="Envoyer" name="mailform" class="button contact__button">
 
                 </form>
             </div>
@@ -261,7 +281,7 @@
     </main>
 
     <!--===== FOOTER =====-->
-    <footer class="footer">
+    <footer class="footer" data-aos="fade-up" data-aos-duration="800">
         <div class="footer__container bd-container">
             <h1 class="footer__title">Léo Nourrisson.</h1>
             <p class="footer__description">"Un pessimiste voit la difficulté dans chaque opportunité, un optimiste <br>voit l'opportunité dans chaque difficulté."<br><span id="winston">Winston Churchill</span></p>
@@ -280,6 +300,13 @@
 
     <!--===== MAIN JS =====-->
     <script src="assets/js/main.js"></script>
+
+    <!--===== AOS =====-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 
 </html>

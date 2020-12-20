@@ -48,7 +48,7 @@ window.addEventListener('scroll', scrollActive)
 /*===== CHANGE BACKGROUND HEADER =====*/
 function scrollHeader() {
     const header = document.getElementById('header')
-    if (this.scrollY >= 200) header.classList.add('scroll-header');
+    if (this.scrollY >= 600) header.classList.add('scroll-header');
     else header.classList.remove('scroll-header')
 }
 window.addEventListener('scroll', scrollHeader)
@@ -68,7 +68,7 @@ gsap.from('.home__greeting, home__name, .home__profession, .home__button', { opa
 
 gsap.from('.nav__logo, .nav__toggle', { opacity: 0, duration: 2, delay: 1.5, y: 25, ease: 'expo.out', stagger: .2 })
 gsap.from('.nav__item', { opacity: 0, duration: 2, delay: 1.8, y: 25, ease: 'expo.out', stagger: .2 })
-gsap.from('.home__social-icon', { opacity: 0, duration: 2, delay: 2.3, y: 25, ease: 'expo.out', stagger: .2 })
+gsap.from('.text__cv, .home__social-icon', { opacity: 0, duration: 2, delay: 2.3, y: 25, ease: 'expo.out', stagger: .2 })
 
 /*===== NAME ANIMATION =====*/
 
