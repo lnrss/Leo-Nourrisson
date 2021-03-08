@@ -1,3 +1,9 @@
-# Léo Nourrisson - Site Web Personnel
+# Léo Nrs 📝
 
-Mon site web : http://leonrs.fr
+Lien : https://leonrs.fr
+
+Bonne visite !
+
+---
+
+<i style="opacity: .5">Technologies utilisées : HTML CSS Javascript PHP.</i>

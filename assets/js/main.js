@@ -1,3 +1,12 @@
+
+
+/*===== GIF LOADER =====*/
+window.addEventListener("load", function () {
+    const loader = document.querySelector(".loader");
+    loader.className += " hidden";
+});
+
+
 /*===== SHOW MENU =====*/
 const showMenu = (toggleId,
     navId) => {
@@ -25,41 +34,13 @@ function linkAction() {
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-/*===== SCROLL SECTIONS ACTIVE LINK =====*/
-const sections = document.querySelectorAll('section[id')
-
-function scrollActive() {
-    const scollY = window.pageYOffset
-    sections.forEach(current => {
-        const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 50
-        sectionId = current.getAttribute('id')
-
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-        } else {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
-        }
-
-    })
-}
-window.addEventListener('scroll', scrollActive)
-
 /*===== CHANGE BACKGROUND HEADER =====*/
 function scrollHeader() {
     const header = document.getElementById('header')
-    if (this.scrollY >= 600) header.classList.add('scroll-header');
+    if (this.scrollY >= 540) header.classList.add('scroll-header');
     else header.classList.remove('scroll-header')
 }
 window.addEventListener('scroll', scrollHeader)
-
-/*===== SHOW SCROLL TOP =====*/
-function scrollTop() {
-    const ScrollTop = document.getElementById('scroll-top')
-    if (this.scrollY >= 560) scrollTop.classList.add('show-scroll');
-    else ScrollTop.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollTop)
 
 /*===== GSAP ANIMATION =====*/
 gsap.from('.home__img', { opacity: 0, duration: 2, delay: .5, x: 60 })
